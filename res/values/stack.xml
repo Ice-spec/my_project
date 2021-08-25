@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Stack">
+        <item>Android</item>
+        <item>UI/UX</item>
+        <item>Backend</item>
+        <item>Frontend</item>
+        <item>Advance Networking</item>
+        <item>Home Networking</item>
+        <item>Solar and Inverter</item>
+        <item>CCTV</item>
+    </string-array>
+</resources>

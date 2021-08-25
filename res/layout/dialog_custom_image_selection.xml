@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:chainUseRtl="true"
+    android:orientation="vertical"
+    android:background="@color/off_white"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image Action"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="Camera"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/dark_blue"
+        app:drawableTopCompat= "@drawable/ic_dialog_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_gallery"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <TextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Gallery"
+        android:textSize="15sp"
+        android:textColor="@color/dark_blue"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        app:drawableTopCompat= "@drawable/ic_dialog_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

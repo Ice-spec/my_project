@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/off_white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/off_white"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            tools:layout_editor_absoluteY="178dp"
+            tools:layout_editor_absoluteX="1dp"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar">
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:layout_editor_absoluteY="19dp"
+                tools:layout_editor_absoluteX="72dp"
+                android:id="@+id/imageView"
+                app:srcCompat="@drawable/ic_back_arrow"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#123250"
+                android:layout_gravity="center"
+                android:text="Messages"/>
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:layout_editor_absoluteY="42dp"
+                tools:layout_editor_absoluteX="9dp"
+                android:id="@+id/imageView2"
+                app:srcCompat="@drawable/ic_add_chat"
+                android:layout_gravity="end"
+                tools:ignore="VectorDrawableCompat" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <SearchView
+        android:background="@drawable/search_style"
+        android:layout_height="36dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:layout_editor_absoluteY="25dp"
+        tools:layout_editor_absoluteX="1dp"
+        android:id="@+id/search"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        app:layout_constraintStart_toStartOf="@id/search"
+        tools:layout_editor_absoluteY="220dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:id="@+id/imageicon"
+        app:srcCompat="@drawable/ic_profile_icon"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginTop="16dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:id="@+id/profile_name"
+        android:text="User Name"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/imageicon"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:id="@+id/textsent"
+        android:text="Last messages sent"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/imageicon"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/time_notification"
+        android:text="now"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@id/chatimage"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/chatimage"
+        app:srcCompat="@drawable/ic_chat_message_circle"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="464dp"
+        android:layout_width="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatimage"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        tools:layout_editor_absoluteY="176dp"
+        android:id="@+id/recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/off_white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar2"
+        app:layout_constraintTop_toBottomOf="@+id/recycler"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="10dp"
+        tools:layout_editor_absoluteY="19dp"
+        tools:layout_editor_absoluteX="72dp"
+        android:id="@+id/camera"
+        app:srcCompat="@drawable/ic_camera_chat"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/acent"
+        android:layout_gravity="center"
+        android:text="Camera"
+        android:layout_marginLeft="16dp" />
+
+</androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DelGram</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_select_image_action">Select Image Action</string>
+
+    <string name="change_profile_pic">Change Profile Photo</string>
+</resources>
